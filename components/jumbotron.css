@@ -1,0 +1,31 @@
+.jumbotron {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: 'Picture Calories add-excercise add-food';
+  width: 40%;
+  /* left: 50%; */
+  margin: 4% auto 0 auto;
+  background-color: grey;
+  padding: 4%;
+  border-radius: 5px;
+}
+.Picture {
+  grid-area: Picture;
+  align-self: center;
+}
+.Calories {
+  grid-area: Calories;
+  align-self: center;
+}
+.add-excercise {
+  grid-area: add-excercise;
+}
+.add-food {
+  grid-area: add-food;
+}
+
+.jumbobtn {
+  padding: 3% 4%;
+}

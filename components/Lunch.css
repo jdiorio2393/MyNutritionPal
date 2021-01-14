@@ -1,0 +1,13 @@
+.Lunch {
+  width: 40%;
+  margin: auto;
+}
+
+.addfood {
+  display: inline-block;
+  margin-right: 1%;
+}
+
+hr.solid {
+  border-top: 1px solid rgb(20, 20, 20);
+}
