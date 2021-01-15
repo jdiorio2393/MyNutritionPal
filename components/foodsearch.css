@@ -1,0 +1,14 @@
+.searchbox {
+  width: 25%;
+  margin: 3% auto;
+  text-align: center;
+  padding: 3%;
+  background: #0062a7;
+  /* height: 7%; */
+  border-radius: 5px;
+  color: white;
+}
+
+.foodLabel {
+  padding-right: 5%;
+}

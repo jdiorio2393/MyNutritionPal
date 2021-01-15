@@ -1,6 +1,10 @@
 .Dinner {
-  width: 40%;
+  width: 44%;
   margin: auto;
+}
+
+.Dinner h1 {
+  color: #0062a7;
 }
 
 .addfood {
@@ -10,4 +14,8 @@
 
 hr.solid {
   border-top: 1px solid rgb(20, 20, 20);
+}
+
+.mealName {
+  display: inline-block;
 }

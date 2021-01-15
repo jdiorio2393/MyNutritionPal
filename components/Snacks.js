@@ -11,7 +11,7 @@ const Snacks = () => {
       <div className="addfood">
         <a href="">Quick Tools</a>
       </div>
-      <hr class="solid"></hr>
+      <hr className="solid"></hr>
     </section>
   );
 };

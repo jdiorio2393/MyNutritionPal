@@ -9,6 +9,12 @@ router.get('/getfood', foodController.getFood, (req, res) => {
   //   res.send('working');
 });
 
-router.post('/chooseFood', foodController.chooseFood);
+router.post('/chooseFood', foodController.chooseFood, (req, res) => {
+  res.status(200).redirect('/');
+});
+
+router.delete('/deleteFood', foodController.deleteFood, (req, res) => {
+  res.status(200).send('worked');
+});
 
 module.exports = router;

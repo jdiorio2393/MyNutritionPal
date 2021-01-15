@@ -1,8 +1,11 @@
 .breakfast {
-  width: 40%;
+  width: 44%;
   margin: auto;
 }
 
+.breakfast h1 {
+  color: #0062a7;
+}
 .addfood {
   display: inline-block;
   margin-right: 1%;
@@ -10,4 +13,21 @@
 
 hr.solid {
   border-top: 1px solid rgb(20, 20, 20);
+}
+
+.fat,
+.carbs,
+.protein {
+  display: inline-block;
+  margin-right: 2%;
+  font-size: 18px;
+}
+
+.deletebtn {
+  margin-left: 2%;
+  display: inline-block;
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+  color: rgb(22, 76, 255);
 }

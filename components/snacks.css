@@ -1,6 +1,11 @@
 .Snacks {
-  width: 40%;
+  width: 44%;
   margin: auto;
+  padding-bottom: 5%;
+}
+
+.Snacks h1 {
+  color: #0062a7;
 }
 
 .addfood {

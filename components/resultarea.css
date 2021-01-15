@@ -1,0 +1,10 @@
+.resultArea {
+  width: 30%;
+  margin: auto;
+  /* height: 7%; */
+  border-radius: 5px;
+}
+
+.resultArea h1 {
+  color: #0062a7;
+}

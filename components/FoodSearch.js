@@ -1,12 +1,14 @@
 import React from 'react';
 import { Component } from 'react';
 import ResultArea from '../components/resultArea';
+import './foodsearch.css';
 
 class FoodSearch extends Component {
   constructor(props) {
     super(props);
     this.state = {
       food: [],
+      meal: '',
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -39,9 +41,10 @@ class FoodSearch extends Component {
                 ),
               },
             ],
+            meal: this.props.location.state.meal,
           });
         }
-        console.log(this.state.food);
+        console.log(this.state);
       });
   }
 
@@ -55,14 +58,19 @@ class FoodSearch extends Component {
           fat={this.state.food[i].nutrients[1].value}
           carbs={this.state.food[i].nutrients[2].value}
           protein={this.state.food[i].nutrients[0].value}
+          meal={this.state.meal}
         />
       );
     }
     return (
       <div>
-        <label htmlFor="fname">Search A Food</label>
-        <input type="text" id="foodSearch" name="foodSearch" />
-        <button onClick={this.handleClick}>Search Foods</button>
+        <div className="searchbox">
+          <label className="foodLabel" htmlFor="fname">
+            Search A Food
+          </label>
+          <input type="text" id="foodSearch" name="foodSearch" />
+          <button onClick={this.handleClick}>Search Foods</button>
+        </div>
         {foodItems}
       </div>
     );

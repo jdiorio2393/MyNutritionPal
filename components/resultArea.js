@@ -1,4 +1,5 @@
 import React from 'react';
+import './resultarea.css';
 
 const resultArea = (props) => {
   const foodObj = {
@@ -7,6 +8,7 @@ const resultArea = (props) => {
     fat: props.fat,
     carbs: props.carbs,
     protein: props.protein,
+    meal: props.meal,
   };
   const chooseFood = () => {
     fetch('/api/chooseFood', {
@@ -16,12 +18,15 @@ const resultArea = (props) => {
       },
       body: JSON.stringify(foodObj),
     })
-      .then((response) => response.json())
-      .then((data) => console.log('post success'))
+      .then((response) => {
+        response.json();
+        window.location.replace('http://localhost:8080');
+      })
+      // .then((data) => console.log('post success'))
       .catch((err) => console.log(err));
   };
   return (
-    <div>
+    <div className="resultArea">
       <h1>{props.name}</h1>
       <h3>Calories: {props.calories}</h3>
       <h3>Fat:{props.fat}</h3>

@@ -1,3 +1,4 @@
+const { FormGroup } = require('@material-ui/core');
 const db = require('../models/peopleModel');
 
 const foodController = {};
@@ -13,12 +14,29 @@ foodController.getFood = (req, res, next) => {
 
 foodController.chooseFood = (req, res, next) => {
   console.log(req.body);
-  const { name, calories, fat, carbs, protein } = req.body;
-  const arr = [name, calories, fat, carbs, protein];
+  const { name, calories, fat, carbs, protein, meal } = req.body;
+  const arr = [name, meal, calories, fat, carbs, protein];
   const query =
-    "INSERT INTO People (name, meal, calories, fat, carbs, protein) VALUES ($1, 'breakfast', $2, $3, $4, $5)";
+    'INSERT INTO People (name, meal, calories, fat, carbs, protein) VALUES ($1, $2, $3, $4, $5, $6)';
   db.query(query, arr)
-    .then((data) => console.log(data))
+    .then((data) => {
+      console.log(data);
+      next();
+    })
     .catch((err) => console.log(err));
 };
+
+foodController.deleteFood = (req, res, next) => {
+  console.log(req.body);
+  const { name, meal } = req.body;
+  const arr = [name, meal];
+  const query = 'DELETE FROM People WHERE name=$1 AND meal=$2';
+  db.query(query, arr)
+    .then((data) => {
+      console.log(data);
+      next();
+    })
+    .catch((err) => console.log(err));
+};
+
 module.exports = foodController;

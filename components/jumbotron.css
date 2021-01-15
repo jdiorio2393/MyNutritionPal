@@ -6,11 +6,29 @@
   grid-template-areas: 'Picture Calories add-excercise add-food';
   width: 40%;
   /* left: 50%; */
-  margin: 4% auto 0 auto;
-  background-color: grey;
-  padding: 4%;
-  border-radius: 5px;
+  margin: 0% auto 0 auto;
+  background-color: #e6e6e6;
+  padding: 2%;
+  border-radius: 0px 0px 5px 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-items: center;
+  /* box-shadow: 1px 3px 7px 1px #00000025; */
 }
+
+.topJumbo {
+  width: 44%;
+  margin: 4% auto 0 auto;
+  background-color: #0062a7;
+  border-radius: 5px 5px 0px 0px;
+  color: white;
+  padding: 0.5% 0;
+}
+
+.topJumbo p {
+  margin: 0;
+  padding-left: 4%;
+}
+
 .Picture {
   grid-area: Picture;
   align-self: center;
@@ -18,14 +36,30 @@
 .Calories {
   grid-area: Calories;
   align-self: center;
+  font-size: 24px;
+  color: black;
 }
 .add-excercise {
   grid-area: add-excercise;
+  align-self: center;
+  width: 100%;
+  text-align: center;
 }
 .add-food {
   grid-area: add-food;
+  align-self: center;
+  width: 100%;
+  text-align: center;
 }
 
 .jumbobtn {
-  padding: 3% 4%;
+  padding: 6% 12%;
+  background: #0062a7;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.image {
+  width: 55%;
 }
